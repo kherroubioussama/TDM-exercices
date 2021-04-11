@@ -1,5 +1,6 @@
 package com.example.tuto_tdm
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
             val year:Int = Calendar.getInstance().get(Calendar.YEAR)
             if (userDB==""){
                 Toast.makeText(this,"please enter a year",Toast.LENGTH_LONG).show()
+                ageTextView.text="age"
             }
             else if(userDB > year.toString()){
                 Toast.makeText(this,"this year should be less then ",Toast.LENGTH_LONG).show()
@@ -24,7 +26,10 @@ class MainActivity : AppCompatActivity() {
                 ageTextView.text = "your age is $myAge years "
             }
         }
-
+        btnNewActivity.setOnClickListener {
+            val intent = Intent(this,MainActivity2::class.java)
+            startActivity(intent)
+        }
 
     }
 }

@@ -49,5 +49,15 @@
         android:gravity="center"
         android:text="age"
         android:textSize="22dp" />
+    <Button
+        android:id="@+id/btnNewActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:minWidth="200dp"
+        android:text="get device info"
+
+        />
 
 </LinearLayout>
